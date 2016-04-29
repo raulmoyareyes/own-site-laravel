@@ -1,0 +1,29 @@
+{% spaceless %}
+
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="details">
+            <h4>Detalles de contacto</h4>
+            <p> <i class="fa fa-map-marker fa-lg"></i> Valencia (España)</p>
+            <p> <i class="fa fa-envelope-o "></i> <a href="mailto:info@raulmoya.es">info@raulmoya.es</a></p>
+            <p> <i class="fa fa-link "></i> <a href="http://www.raulmoya.es"> www.raulmoya.es</a></p>
+        </div>
+
+        <div class="form">
+            <h4>Envíame un email</h4>
+            <div class="content">
+                <div class="response"></div>
+                <form id="contactForm" name="" action="/send-mail" method="post">
+                    <span><input type="text" class="name" name="name" value="" size="40" id="name" placeholder="Tu nombre..."></span>
+                    <span><input type="email" class="email" name="email" value="" size="40" id="email" placeholder="Tu email..."></span>
+                    <span><textarea name="message" cols="40" rows="10" id="message" placeholder="Tu mensaje..."></textarea></span>
+                    <input type="submit" class="submit" value="Enviar email" id="submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endspaceless %}

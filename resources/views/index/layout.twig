@@ -1,0 +1,59 @@
+{% spaceless %}
+{% extends "base" %}
+
+    {% block title %}Raúl Moya{% endblock %}
+
+    {% block head %} {# --------------------------------------------------------------------------------------------- #}
+
+        {{ parent() }}
+
+        <meta name="description" content="Hola, soy Raúl. Apasionado de la informática y las nuevas tecnologías.">
+        <meta name="author" content="Raúl Moya Reyes" />
+        <meta name="robots" content="all">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="google-site-verification" content="C2VG_Yu5luq-awRmgdVnIU2Nv4yzgAjhKpyKViI2qB0" />
+        <script async defer src='//www.google-analytics.com/analytics.js'></script>
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-34226635-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+    {% endblock %}
+
+    {% block css %} {# ---------------------------------------------------------------------------------------------- #}
+
+        {{ parent() }}
+
+        <link rel="stylesheet" href="css/style.css">
+
+    {% endblock %}
+
+    {% block content %} {# ------------------------------------------------------------------------------------------ #}
+
+        {% include 'index.header' %}
+
+        {% include 'index.blocks.about' %}
+        {#{% include 'index.blocks.skills' %}#}
+        {% include 'index.blocks.experience' %}
+        {% include 'index.blocks.education' %}
+        {#{% include 'index.blocks.portfolio' %}#}
+        {#{% include 'index.blocks.blog' %}#}
+        {% include 'index.blocks.contact' %}
+
+        {% include 'index.footer' %}
+
+    {% endblock %}
+
+    {% block javascript %} {# --------------------------------------------------------------------------------------- #}
+
+        {{ parent() }}
+
+        <script src="js/main.js"></script>
+
+    {% endblock %}
+
+{% endspaceless %}

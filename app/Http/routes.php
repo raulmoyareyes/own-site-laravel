@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Index route
+ */
+Route::get('/', [
+    'as' => 'profile',
+    'uses' => 'Controller@showIndex'
+]);
+
+Route::post('/send-mail', [
+    'as' => 'profile',
+    'uses' => 'Controller@sendMail'
+]);

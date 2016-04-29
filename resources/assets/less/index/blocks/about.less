@@ -1,0 +1,99 @@
+.about {
+    background: #00bdbd;
+    color: #fff;
+
+    .container {
+
+        .info {
+
+            .text {
+                width: 64%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 8%;
+
+                h4 {
+                    font-size: 1.5em;
+                    line-height: 30px;
+                    padding-bottom: 6px;
+                    font-weight: 200;
+                    margin: 0px;
+                }
+
+                h5 {
+                    font-size: 1.2em;
+                    line-height: 24px;
+                    padding-bottom: 6px;
+                    font-weight: 400;
+                    margin: 0px;
+                }
+
+                p {
+                    font-size: 0.9em;
+                    line-height: 21px;
+                    font-weight: 200;
+                    padding-bottom: 22px;
+                    margin: 0px;
+                }
+
+                a {
+                    font-size: 1em;
+                    font-weight: 700;
+                    background: #474d5d;
+                    padding: 16px 22px;
+                    display: inline-block;
+                    color: #fff;
+                }
+
+            }
+
+            .image {
+                width: 27%;
+                display: inline-block;
+                vertical-align: middle;
+
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+
+            }
+
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+        .container {
+            .info {
+                .text {
+                    width: 60%;
+                    margin-right: 10%;
+                }
+                .image {
+                    width: 27%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            .info {
+                .text {
+                    width: 100%;
+                    margin-bottom: 5em;
+                    margin-right: 0;
+                }
+                .image {
+                    width: 100%;
+                    text-align: center;
+                    img {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+
+}

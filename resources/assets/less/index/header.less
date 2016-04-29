@@ -1,0 +1,72 @@
+header {
+  padding: 0;
+  margin: 0;
+  height: 280px;
+  background-image: url('../img/bg-header-blue.png');
+  color: #fff;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+
+  .container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+
+    .title {
+
+      h1 {
+        font-size: 5em;
+        line-height: 0;
+        font-weight: 100;
+      }
+
+      h2 {
+        font-weight: 100;
+      }
+
+    }
+
+  }
+
+}
+
+nav {
+  margin-top: 0px;
+  position: relative;
+  z-index: 15;
+  background: #262b37;
+
+  .menu {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 22px 0;
+
+      a {
+        color: #c3c8d6;
+        padding: 22px 25px;
+        line-height: 18px;
+        text-align: center;
+
+        &:hover {
+          color: #fff;
+        }
+
+      }
+
+      &.active {
+        background: #1b1f29;
+        color: #c3c8d6;
+      }
+
+    }
+
+  }
+
+}

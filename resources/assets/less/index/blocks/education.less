@@ -1,0 +1,82 @@
+.education {
+    background: #eeeeee;
+    color: #474d5d;
+
+    .container {
+
+        h2 {
+            color: #ff675f;
+        }
+
+        h3 {
+            color: #84868d;
+        }
+
+        .info {
+            .career {
+                text-align: right;
+                .year {
+                    width: 20%;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: top;
+                    background: #474d5d;
+                    color: #FFFFFF;
+                    font-size: 0.9em;
+                    margin-top: 2em;
+                    padding: 0.3em 0;
+                }
+                .description {
+                    text-align: left;
+                    display: inline-block;
+                    width: 70%;
+                    padding-left: 8%;
+                    div {
+                        background: #fff;
+                        border-bottom: solid 4px #e8e7e7;
+                        padding: 2em;
+                        position: relative;
+
+                        &:before {
+                            content:"";
+                            width: 0;
+                            height: 0;
+                            border: 10px solid transparent;
+                            border-right:10px solid #fff;
+
+                            left: -20px;
+                            position: absolute;
+                        }
+                        h4 {
+                            margin: 0;
+                        }
+                        h5 {
+                            margin: 0.8em 0;
+                        }
+                    }
+                }
+            }
+            .courses {
+                text-align: right;
+                .description {
+                    text-align: left;
+                    display: inline-block;
+                    width: 70%;
+                    padding-left: 8%;
+                    div {
+                        background: #fff;
+                        border-bottom: solid 4px #e8e7e7;
+                        padding: 2em;
+                        position: relative;
+
+                        h4 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
