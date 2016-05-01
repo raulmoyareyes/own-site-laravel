@@ -10501,11 +10501,16 @@ $(function () {
             name = $form.find( "input[name='name']" ).val(),
             email = $form.find( "input[name='email']" ).val(),
             message = $form.find( "textarea[name='message']" ).val(),
+            recaptcha = $form.find("#g-recaptcha-response").val(),
+            // token = $form.find('input[name="csrf-token"]').val(),
             url = $form.attr( "action" );
 
         // Send the data using post
-        $.post( url, { name: name, email: email, message: message }, function(data) {
+        $.post( url, { name: name, email: email, message: message, 'g-recaptcha-response': recaptcha }, function(data) {
             $(".response").empty().html(data.message);
+        }).fail(function() {
+            $(".response").empty().html('Error al enviar el formulario');
+            grecaptcha.reset();
         });
     });
 });

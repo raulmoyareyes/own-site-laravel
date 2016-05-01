@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
@@ -35,25 +36,29 @@ class Controller extends BaseController
         $data["name"] = $request->input('name');
         $data["email"] = $request->input('email');
         $data["content"] = $request->input('message');
-        $message = view('mail.contact', $data);
-        $headers = "Content-Type: text/html; charset=ISO-8859-1\r\n";
-        if (mail('info@raulmoya.es', 'Formulario de contacto - raulmoya.es', $message, $headers)) {
-            return response()->json(array(
-                'status' => 'send',
-                'message' => 'Message send!'
-            ), 200);
-        } else {
-            return response()->json(array(
-                'status' => 'error',
-                'message' => 'An error occurred!'
-            ), 500);
-        }
-//        $sent = Mail::send('mail.contact', $data, function($message)
-//        {
-//            $message->from('info@raulmoya.es', 'raulmoya.es');
-//            $message->to('info@raulmoya.es');
-//            $message->subject('Formulario de contacto - raulmoya.es');
-//        });
-//        if( ! $sent) dd("something wrong");
+//        $message = view('mail.contact', $data);
+//        $headers = "Content-Type: text/html; charset=ISO-8859-1\r\n";
+//        if (mail('info@raulmoya.es', 'Formulario de contacto - raulmoya.es', $message, $headers)) {
+//            return response()->json(array(
+//                'status' => 'send',
+//                'message' => 'Message send!'
+//            ), 200);
+//        } else {
+//            return response()->json(array(
+//                'status' => 'error',
+//                'message' => 'An error occurred!'
+//            ), 500);
+//        }
+        $this->validate($request, [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
+        $sent = Mail::send('mail.contact', $data, function($message)
+        {
+            $message->from('info@raulmoya.es', 'raulmoya.es');
+            $message->to('moyareyesraul@gmail.com');
+            $message->subject('Formulario de contacto - raulmoya.es');
+        });
+        if( ! $sent) dd("something wrong");
     }
 }
