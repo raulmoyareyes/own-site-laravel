@@ -2214,6 +2214,10 @@ footer .footer .container ul li a i {
   color: #fff;
   font-size: 1.2em;
 }
+.contact .container .form .g-recaptcha {
+  margin: 0 calc(100% - 465px) 0 0;
+  display: inline-block;
+}
 .contact .container .form input {
   background: #585f73;
   color: #93959c;
