@@ -13,34 +13,34 @@
                 margin-right: 8%;
 
                 h4 {
-                    font-size: 1.5em;
-                    line-height: 30px;
-                    padding-bottom: 6px;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    padding-bottom: 0.5rem;
                     font-weight: 200;
-                    margin: 0px;
+                    margin: 0;
                 }
 
                 h5 {
-                    font-size: 1.2em;
-                    line-height: 24px;
-                    padding-bottom: 6px;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    padding-bottom: 0.5rem;
                     font-weight: 400;
-                    margin: 0px;
+                    margin: 0;
                 }
 
                 p {
-                    font-size: 0.9em;
-                    line-height: 21px;
+                    font-size: 0.9rem;
+                    line-height: 1.3rem;
                     font-weight: 200;
-                    padding-bottom: 22px;
-                    margin: 0px;
+                    padding-bottom: 1rem;
+                    margin: 0;
                 }
 
                 a {
-                    font-size: 1em;
+                    font-size: 1rem;
                     font-weight: 700;
                     background: #474d5d;
-                    padding: 16px 22px;
+                    padding: 1rem 1.5px;
                     display: inline-block;
                     color: #fff;
                 }
@@ -55,6 +55,7 @@
                 img {
                     width: 100%;
                     border-radius: 50%;
+                    max-width: 230px;
                 }
 
             }
@@ -79,6 +80,9 @@
 
     @media (max-width: 768px) {
         .container {
+            h3 {
+                margin-bottom: 7%;
+            }
 
             .info {
                 .text {
@@ -98,21 +102,18 @@
         }
     }
 
-}
+    @media (max-width: 560px) {
+        .container {
 
-@media (max-width: 768px) {
-    height: 220px;
-
-    .container {
-
-        .title {
-
-            h1 {
-                font-size: 3em;
-            }
-
-            h2 {
-                font-size: 1em;
+            .info {
+                .text {
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                    h5 {
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }

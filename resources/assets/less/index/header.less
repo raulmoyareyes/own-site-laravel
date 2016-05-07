@@ -17,9 +17,10 @@ header {
         .title {
 
             h1 {
-                font-size: 5em;
+                font-size: 5rem;
                 line-height: 0;
                 font-weight: 100;
+                text-transform: uppercase;
             }
 
             h2 {
@@ -30,7 +31,7 @@ header {
 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48em) {
         height: 220px;
 
         .container {
@@ -38,11 +39,11 @@ header {
             .title {
 
                 h1 {
-                    font-size: 3em;
+                    font-size: 3rem;
                 }
 
                 h2 {
-                    font-size: 1em;
+                    font-size: 1rem;
                 }
             }
         }
@@ -51,7 +52,7 @@ header {
 }
 
 nav {
-    margin-top: 0px;
+    margin-top: 0;
     position: relative;
     z-index: 15;
     background: #262b37;
@@ -64,12 +65,12 @@ nav {
 
         li {
             display: inline-block;
-            padding: 22px 0;
+            padding: 1.4rem 0;
 
             a {
                 color: #c3c8d6;
-                padding: 22px 25px;
-                line-height: 18px;
+                padding: 0 1.2rem;
+                line-height: 1rem;
                 text-align: center;
 
                 &:hover {
@@ -91,35 +92,36 @@ nav {
         display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48em) {
         height: 66px;
 
         .menu {
             position: relative;
             width: 200px;
             margin: 0 0 0 -200px;
-            display: inline-block;
+            display: none;
 
             li {
                 width: 200px;
                 background: #262b37;
                 display: block;
+                padding: 0.8rem;
             }
         }
 
         .bt-menu-mobile {
             cursor: pointer;
-            width: 35px;
+            width: 30px;
             position: relative;
-            height: 23px;
+            height: 21px;
             display: block;
-            top: 20px;
+            top: 23px;
             left: 20px;
 
             span {
                 background-color: #ffffff;
                 display: block;
-                height: 3px;
+                height: 2px;
                 position: absolute;
                 width: 100%;
 
@@ -146,6 +148,7 @@ nav {
         &.open {
 
             .menu {
+                display: inline-block;
                 margin: 0;
                 top: 43px;
             }
@@ -156,6 +159,7 @@ nav {
                         margin: -2px 0 0 -3px;
                         top: 50%;
                         width: 120%;
+
                         -moz-transform: rotate(-40deg);
                         -webkit-transform: rotate(-40deg);
                         -o-transform: rotate(-40deg);
@@ -168,6 +172,7 @@ nav {
                         margin: -2px 0 0 -3px;
                         top: 50%;
                         width: 120%;
+
                         -moz-transform: rotate(40deg);
                         -webkit-transform: rotate(40deg);
                         -o-transform: rotate(40deg);
