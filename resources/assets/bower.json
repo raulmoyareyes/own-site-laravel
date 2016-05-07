@@ -1,0 +1,18 @@
+{
+  "name": "own-site-laravel",
+  "homepage": "https://github.com/RaulMoyaReyes/own-site-laravel",
+  "authors": [
+    "Raúl Moya Reyes <info@raulmoya.es>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-ui": "jqueryui#^1.11.4",
+    "mixitup": "^2.1.11",
+    "font-awesome": "^4.6.2",
+    "normalize-less": "*"
+  }
+}

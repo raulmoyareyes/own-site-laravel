@@ -65,10 +65,14 @@ $(function () {
     filterList.init();
     stickMenu.init('nav');
 
+    $('.bt-menu-mobile').click(function () {
+        $('.original, .cloned').toggleClass('open');
+    });
+
     //@TODO - Refactor
     // Cache selectors
     var lastId,
-        topMenu = $(".menu"),
+        topMenu = $(".menu").parent(),
         topMenuHeight = topMenu.outerHeight()+15,
         // All list items
         menuItems = topMenu.find("a"),
@@ -83,6 +87,7 @@ $(function () {
     menuItems.click(function(e){
         var href = $(this).attr("href"),
             offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+20;
+        $('.original, .cloned').removeClass('open');
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 300);
@@ -108,7 +113,7 @@ $(function () {
             // Set/remove active class
             menuItems
                 .parent().removeClass("active")
-                .end().filter("[href=#"+id+"]").parent().addClass("active");
+                .end().filter("[href='#"+id+"']").parent().addClass("active");
         }
     });
 

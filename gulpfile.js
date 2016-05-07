@@ -1,14 +1,14 @@
 
 var gulp = require('gulp');
 var elixir = require('laravel-elixir');
-var del = require('del');
+// var del = require('del');
 
-elixir.extend("remove", function(path) {
-    gulp.task("remove", function() {
-        del(path);
-    });
-    return this.queueTask("remove");
-});
+// elixir.extend("remove", function(path) {
+//     gulp.task("remove", function() {
+//         del(path);
+//     });
+//     return this.queueTask("remove");
+// });
 
 elixir(function(mix) {
 
@@ -25,8 +25,8 @@ elixir(function(mix) {
     // LESS & CSS
         .less([
 
-            "../vendor/normalize/normalize.less",
-            "../vendor/font-awesome/font-awesome.less",
+            "../bower_components/normalize-less/normalize.less",
+            "../bower_components/font-awesome/less/font-awesome.less",
 
             "index/layout.less",
             "index/header.less",
@@ -43,9 +43,9 @@ elixir(function(mix) {
         // JAVASCRIPT
         .scripts([
 
-            "../vendor/jquery/jquery-1.11.3.js",
-            "../vendor/jquery-ui/jquery-ui.min.js",
-            "../vendor/mixitup/jquery.mixitup.min.js",
+            "../bower_components/jquery/dist/jquery.js",
+            "../bower_components/jquery-ui/jquery-ui.min.js",
+            "../bower_components/mixitup/build/jquery.mixitup.min.js",
 
             "main.js"
 
