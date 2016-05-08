@@ -16,11 +16,21 @@
                 text-transform: uppercase;
                 color: #fff;
                 font-size: 1.2em;
+                font-weight: 100;
             }
 
             .g-recaptcha {
-                margin: 0 ~"calc(100% - 465px)" 0 0;
-                display: inline-block;
+                //margin: 0 ~"calc(100% - 465px)" 0 0;
+                //display: inline-block;
+                margin: -28px -3px 20px auto;
+                display: block;
+                width: 305px;
+
+                .rc-anchor-light {
+                    background: none;
+                    border: 0;
+                    color: #93959C;
+                }
             }
 
             input {
@@ -78,6 +88,7 @@
                 text-transform: uppercase;
                 color: #fff;
                 font-size: 1.2em;
+                font-weight: 100;
             }
 
             p {
@@ -106,7 +117,7 @@
 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         .container {
             .details {
                 width: 100%;
@@ -123,6 +134,19 @@
                     margin: 0 -3px 20px auto;
                     display: block;
                     width: 305px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 35rem) {
+        .container {
+            .form {
+                input {
+                    width: 98%;
+                    &.name {
+                        margin-right: 0;
+                    }
                 }
             }
         }

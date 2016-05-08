@@ -16,7 +16,7 @@
             .career {
                 text-align: right;
                 .year {
-                    width: 20%;
+                    width: 100px;
                     text-align: center;
                     display: inline-block;
                     vertical-align: top;
@@ -29,7 +29,7 @@
                 .description {
                     text-align: left;
                     display: inline-block;
-                    width: 70%;
+                    width: ~"calc(92% - 100px)";
                     padding-left: 8%;
                     div {
                         background: #fff;
@@ -64,7 +64,7 @@
                 .description {
                     text-align: left;
                     display: inline-block;
-                    width: 70%;
+                    width: ~"calc(92% - 100px)";
                     padding-left: 8%;
                     div {
                         background: #fff;
@@ -81,23 +81,36 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
+        .container {
+
+        }
+    }
+
+    @media (max-width: 35rem) {
         .container {
 
             .info {
                 .career {
                     .year {
-                        width: 18%;
+                        display: block;
                     }
                     .description {
-                        width: 77%;
-                        padding-left: 5%;
+                        display: block;
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 5%;
+                        div {
+                            &:before {
+                                content: none;
+                            }
+                        }
                     }
                 }
                 .courses {
                     .description {
-                        width: 77%;
-                        padding-left: 5%;
+                        width: 100%;
+                        padding-left: 0;
                     }
                 }
             }

@@ -117,7 +117,7 @@ $(function () {
         }
     });
 
-    $("#contactForm").submit(function(event) {
+    $('#contactForm').submit(function(event) {
 
         // Stop form from submitting normally
         event.preventDefault();
@@ -134,9 +134,12 @@ $(function () {
         // Send the data using post
         $.post( url, { name: name, email: email, message: message, 'g-recaptcha-response': recaptcha }, function(data) {
             $(".response").empty().html(data.message);
+            $form[0].reset();
+            grecaptcha.reset();
         }).fail(function() {
             $(".response").empty().html('Error al enviar el formulario');
             grecaptcha.reset();
         });
+
     });
 });
