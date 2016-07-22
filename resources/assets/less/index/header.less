@@ -2,7 +2,7 @@ header {
     padding: 0;
     margin: 0;
     height: 280px;
-    background-image: url('../img/bg-header-blue.png');
+    //background-image: url('../img/bg-header-blue.png');
     color: #fff;
     overflow: hidden;
     display: table;
@@ -17,10 +17,13 @@ header {
         .title {
 
             h1 {
-                font-size: 5rem;
+                font-family: "Helvetica Neue";
+                font-size: 4rem;
                 line-height: 0;
-                font-weight: 100;
-                text-transform: uppercase;
+                font-weight: 200;
+                span {
+                    font-weight: 200;
+                }
             }
 
             h2 {
@@ -97,24 +100,27 @@ nav {
 
         .menu {
             position: relative;
-            width: 200px;
             margin: 0 0 0 -200px;
             display: none;
+            height: 100vh;
+            background: #262B37;
+            width: auto;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
 
             li {
                 width: 200px;
                 background: #262b37;
                 display: block;
                 padding: 0.8rem;
-                box-shadow: #000 0 0 1px 0;
+                //box-shadow: #000 0 0 1px 0;
             }
         }
 
         .bt-menu-mobile {
             cursor: pointer;
-            width: 30px;
+            width: 25px;
             position: relative;
-            height: 21px;
+            height: 18px;
             display: block;
             top: 23px;
             left: 20px;
@@ -132,7 +138,7 @@ nav {
                 transition: all .2s ease-in-out;
 
                 &.top {
-                    top: 0;
+                    top: -1px;
                 }
 
                 &.middle {
