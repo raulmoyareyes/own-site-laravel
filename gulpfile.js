@@ -20,7 +20,7 @@ elixir(function(mix) {
 
     mix
 
-    //.remove([ 'public/img/*', 'public/fonts/*', 'public/js/*', 'public/css/*' ])
+    // .remove([ 'public/img/*', 'public/fonts/*', 'public/js/*', 'public/css/*' ])
 
     // LESS & CSS
         .less([
@@ -54,6 +54,8 @@ elixir(function(mix) {
         // IMAGES & FONTS
         .copy( 'resources/assets/img', 'public/img' )
         .copy( 'resources/assets/docs', 'public/docs' )
-        .copy( 'resources/assets/fonts', 'public/fonts' );
+        .copy( 'resources/assets/fonts', 'public/fonts' )
+
+        .version(["public/css/style.css", "public/js/main.js"]);
 
 });

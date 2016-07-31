@@ -30,7 +30,7 @@
 
         {{ parent() }}
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ elixir('css/style.css') }}">
 
     {% endblock %}
 
@@ -53,7 +53,7 @@
     {% block javascript %} {# --------------------------------------------------------------------------------------- #}
 
         {{ parent() }}
-        <script src="js/main.js"></script>
+        <script src="{{ elixir('js/main.js') }}"></script>
 
     {% endblock %}
 
