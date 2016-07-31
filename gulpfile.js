@@ -56,6 +56,6 @@ elixir(function(mix) {
         .copy( 'resources/assets/docs', 'public/docs' )
         .copy( 'resources/assets/fonts', 'public/fonts' )
 
-        .version(["public/css/style.css", "public/js/main.js"]);
+        .version(["public/css/style.css", "public/js/main.js"], 'public');
 
 });
